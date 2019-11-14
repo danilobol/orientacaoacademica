@@ -10,7 +10,7 @@ sequelize.authenticate().then(function(){
   console.log("Falha ao se conectar: "+erro)
 })
 
-const Postagem = sequelize.define('postagens',{ //criando um model para postagens
+const Orientacao = sequelize.define('orientacao',{ //criando um model para postagens
   titulo:{
     type: Sequelize.STRING
   },
@@ -21,7 +21,7 @@ const Postagem = sequelize.define('postagens',{ //criando um model para postagen
 
 //Postagem.sync({force: true})
 
-Postagem.CREATE({
-  titulo: "Oi danilo",
+Orientacao.CREATE({
+  titulo: "fdfd",
   conteudo: "dshgsdhsdhjsjhdsds"
 })
