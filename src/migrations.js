@@ -33,6 +33,7 @@ module.exports = {
             id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
             name TEXT NOT NULL,
             email TEXT NOT NULL,
+            cpf TEXT NOT NULL,
             password TEXT NOT NULL,
             registration TEXT NOT NULL,
             course_id UUID REFERENCES courses(id)
@@ -42,6 +43,7 @@ module.exports = {
             id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
             name TEXT NOT NULL,
             email TEXT NOT NULL,
+            cpf TEXT NOT NULL,
             password TEXT NOT NULL,
             department_id UUID REFERENCES departments(id)
         );
