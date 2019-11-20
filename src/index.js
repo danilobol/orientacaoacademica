@@ -1,6 +1,7 @@
 const express = require("express");
 const studentRouter = require("./student/routes");
 
+
 const PORT = process.env.PORT || 8000;
 
 const app = express();
