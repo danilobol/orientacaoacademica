@@ -1,5 +1,7 @@
 const express = require("express");
-const Student = require("./model");
+const Orientation = require("./model");
+
+
 
 const router = express.Router();
 
@@ -7,16 +9,18 @@ router.route("/")
     .get((req, res, next) => {
         const { limit = 20, offset = 0 } = req.query;
 
-        const users = Student.getAll(offset, limit);
+        const help = Orientation.getAll(offset, limit);
 
-        res.json(users);
+        res.json(help);
     })
     .post((req, res, next) => {
-        const student = req.body;
+        const help = req.body;
 
-        const newStudent = Student.create(student);
+        const newHelp = Orientation.create(help);
 
-        res.json(newStudent);
+        res.json(newHelp);
     });
+
+
 
 module.exports = router;

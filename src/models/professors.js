@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const sequelize = require('../_database')
+const sequelize = require('./_database')
 
 const Professors = sequelize.define('professors', {
   nome: {

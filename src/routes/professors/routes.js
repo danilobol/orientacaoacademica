@@ -4,13 +4,13 @@ const Professors = require("./model");
 const router = express.Router();
 
 router.route("/")
-    .get((req, res, next) => {
+    /*.get((req, res, next) => {
         const { limit = 20, offset = 0 } = req.query;
 
         const users = Professors.getAll(offset, limit);
 
         res.json(users);
-    })
+    })*/
     .post((req, res, next) => {
         const professors = req.body;
 
@@ -18,5 +18,6 @@ router.route("/")
 
         res.json(newProfessors);
     });
+router.route()
 
 module.exports = router;

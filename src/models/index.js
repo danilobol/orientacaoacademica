@@ -1,4 +1,4 @@
-const sequelize = require('../_database')
+const sequelize = require('./_database')
 
 const models = {
   student: require('./students'),
