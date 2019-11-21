@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../_database')
 
-const Professors = sequelize.define('professors', {
+const Student = sequelize.define('students', {
   nome: {
     type: Sequelize.TEXT
   },
@@ -14,6 +14,12 @@ const Professors = sequelize.define('professors', {
   password: {
     type: Sequelize.TEXT
   },
+  registration: {
+    type: Sequelize.TEXT
+  },
 })
 
-module.exports = Professors
+module.exports = Student
+
+//const Orientations = require('./orientations')
+//Student.belongsToMany(Orientations, {through: 'aluno_orientacao'});

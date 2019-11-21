@@ -9,7 +9,7 @@ const pgpool = new pg.Pool({
     host: process.env.POSTGRES_HOST || "localhost",
     database: process.env.POSTGRES_DB || "postgres",
     port: process.env.POSTGRES_PORT ? parseInt(process.env.POSTGRES_PORT) : 5432,
-    password: process.env.POSTGRES_PASS || "postgres",
+    password: process.env.POSTGRES_PASS || "010156",
     max: 300
 });
 

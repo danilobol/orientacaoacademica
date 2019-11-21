@@ -1,18 +1,18 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../_database')
 
-const Orientation = sequelize.define('orientations', {
+
+const Orientations = sequelize.define('orientations', {
   observations: {
-    type: Sequelize.STRING
+    type: Sequelize.TEXT
   },
   pending: {
     type: Sequelize.BOOLEAN
   },
 })
+module.exports = Orientations
 
-module.exports = Orientation
-
-const student = require('./student')
-const professors = require('./professors')
-Orientation.belongsToMany(student, {through: 'created_by'});
-Orientation.belongsToMany(professors, {through: 'oriented_by'});
+const Student = require('./students')
+const Professors = require('./professors')
+Orientation.belongsToMany(Student, {through: 'aluno_orientacao'});
+Orientation.belongsToMany(Professors, {through: 'professors_orientacao'});
